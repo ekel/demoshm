@@ -1,5 +1,7 @@
 CPP = g++
 
+INSTDIR = ./bin
+
 OBJS = test.o DemoShm.o
 
 TARGET = test
@@ -15,3 +17,15 @@ DemoShm.o : DemoShm.cpp DemoShm.h shm_com.h
 		
 clean :
 	rm $(TARGET) $(OBJS)
+
+
+install : test
+	@if	[ -d $(INSTDIR) ]; \
+	   then \
+	   cp test $(INSTDIR); \
+	   chmod a+x $(INSTDIR)/test; \
+	   echo "Installed in $(INSTDIR)"; \
+	else \
+	   echo "Sorry, $(INSTDIR) does not exist"; \
+	fi
+	
