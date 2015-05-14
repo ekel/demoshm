@@ -2,7 +2,7 @@
  * shm_com.h
  *
  *  Created on: 2015年5月4日
- *      Author: Administrator
+ *      Author: ikelhe84@gmail.com
  */
 
 #ifndef SHM_COM_H_
